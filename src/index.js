@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
+import BookContainer from './components/BookContainer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <BookContainer />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root'),
 );
