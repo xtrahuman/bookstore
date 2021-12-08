@@ -6,8 +6,14 @@ const Books = (props) => {
     name: PropTypes.string.isRequired,
     bookType: PropTypes.string.isRequired,
     writer: PropTypes.string.isRequired,
+    removeBook: PropTypes.func.isRequired,
+    book: PropTypes.oneOfType([PropTypes.object]).isRequired,
   };
-  const { name, bookType, writer } = props;
+
+  const {
+    book, name, bookType, writer, removeBook,
+  } = props;
+
   return (
     <li>
       <div>
@@ -15,7 +21,7 @@ const Books = (props) => {
         <p>{name}</p>
         <p>{writer}</p>
       </div>
-      <button type="button">remove</button>
+      <button type="button" onClick={() => removeBook(book)}>remove</button>
     </li>
   );
 };
