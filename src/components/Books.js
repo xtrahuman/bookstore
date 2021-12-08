@@ -7,7 +7,7 @@ const Books = (props) => {
     bookType: PropTypes.string.isRequired,
     writer: PropTypes.string.isRequired,
     removeBook: PropTypes.func.isRequired,
-    book: PropTypes.string.isRequired,
+    book: PropTypes.oneOfType([PropTypes.object]).isRequired,
   };
 
   const {

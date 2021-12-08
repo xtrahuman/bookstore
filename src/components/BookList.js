@@ -4,7 +4,7 @@ import Books from './Books';
 
 const BookList = (props) => {
   BookList.propTypes = {
-    allbooks: PropTypes.string.isRequired,
+    allbooks: PropTypes.oneOfType([PropTypes.array]).isRequired,
     removeBook: PropTypes.func.isRequired,
   };
   const { allbooks, removeBook } = props;
