@@ -1,32 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { addBook, removeBook } from '../redux/books/books';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBook, removeBook, fetchBook } from '../redux/books/books';
 import BookInput from './BookInput';
 import BookList from './BookList';
 import Categories from './Categories';
 import Navbar from './Navbar';
 
 const bookContainer = () => {
-  const books = useSelector((state) => state.bookReducer);
   const dispatch = useDispatch();
-  localStorage.setItem('allBooks', JSON.stringify(books));
-  const moreBook = (title, author, bookType) => {
+  const books = useSelector((state) => state.bookReducer);
+
+  useEffect(() => {
+    dispatch(fetchBook());
+  }, []);
+  const moreBook = (title, category) => {
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
-      author,
-      bookType,
+      category,
     };
 
     dispatch(addBook(newBook));
-    localStorage.setItem('allBooks', JSON.stringify(books));
   };
-  const deleteBook = (book) => {
+  const deleteBooks = (book) => {
     dispatch(removeBook(book));
-
-    localStorage.setItem('allBooks', JSON.stringify(books));
   };
 
   return (
@@ -40,7 +39,7 @@ const bookContainer = () => {
           path="/"
           element={(
             <div>
-              <BookList allbooks={books} removeBook={deleteBook} />
+              <BookList allbooks={books} removeBook={deleteBooks} />
               <BookInput moreBook={moreBook} />
             </div>
 )}

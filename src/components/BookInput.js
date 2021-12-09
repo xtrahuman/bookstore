@@ -8,7 +8,6 @@ const BookInput = (props) => {
 
   const [bookText, setBookText] = useState({
     title: '',
-    author: '',
     bookType: 'action',
   });
 
@@ -23,11 +22,10 @@ const BookInput = (props) => {
     const { moreBook } = props;
 
     e.preventDefault();
-    if (bookText.title.trim() && bookText.author.trim()) {
-      moreBook(bookText.title, bookText.author, bookText.bookType);
+    if (bookText.title.trim()) {
+      moreBook(bookText.title, bookText.bookType);
       setBookText({
         title: '',
-        author: '',
         bookType: bookText.bookType,
       });
     } else {
@@ -45,14 +43,6 @@ const BookInput = (props) => {
           placeholder="add your book"
           name="title"
           value={bookText.title}
-          onChange={onChange}
-        />
-        <input
-          type="text"
-          className="input-author"
-          placeholder="author"
-          name="author"
-          value={bookText.author}
           onChange={onChange}
         />
         <select id="selectbooks" name="bookType" onChange={onChange} form="book-form">

@@ -12,10 +12,9 @@ const BookList = (props) => {
     <ul>
       {allbooks.map((book) => (
         <Books
-          key={book.id}
+          key={book.item_id}
           name={book.title}
-          bookType={book.bookType}
-          writer={book.author}
+          bookType={book.category}
           removeBook={removeBook}
           book={book}
         />

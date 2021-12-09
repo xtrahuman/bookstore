@@ -5,13 +5,13 @@ const Books = (props) => {
   Books.propTypes = {
     name: PropTypes.string.isRequired,
     bookType: PropTypes.string.isRequired,
-    writer: PropTypes.string.isRequired,
     removeBook: PropTypes.func.isRequired,
+    // id: PropTypes.string.isRequired,
     book: PropTypes.oneOfType([PropTypes.object]).isRequired,
   };
 
   const {
-    book, name, bookType, writer, removeBook,
+    book, name, bookType, removeBook,
   } = props;
 
   return (
@@ -19,7 +19,6 @@ const Books = (props) => {
       <div>
         <p>{bookType}</p>
         <p>{name}</p>
-        <p>{writer}</p>
       </div>
       <button type="button" onClick={() => removeBook(book)}>remove</button>
     </li>
