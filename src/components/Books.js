@@ -16,13 +16,16 @@ const Books = (props) => {
 
   return (
     <li>
-      {/* <div className="allbook-style"> */}
       <div className="book-detail">
         <div className="book-type-name">
           <p className="book-type">{bookType}</p>
           <p className="book-name">{name}</p>
         </div>
-        <button type="button" className="remove-button" onClick={() => removeBook(book)}>remove</button>
+        <div className="interactive-btn">
+          <button type="button" className="int-button">comment</button>
+          <button type="button" className="int-button" onClick={() => removeBook(book)}>remove</button>
+          <button type="button" className="int-button">edit</button>
+        </div>
       </div>
       <div className="chapter-completion">
         <div className="completion-data">
@@ -38,7 +41,6 @@ const Books = (props) => {
           <button type="button" className="update-progress">update progress</button>
         </div>
       </div>
-      {/* </div> */}
     </li>
   );
 };

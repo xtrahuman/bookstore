@@ -141,8 +141,11 @@ ul.book-list li {
   color: #121212;
 }
 
-.remove-button {
-  width: 3.375rem;
+.interactive-button {
+  display: flex;
+}
+
+.int-button {
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
