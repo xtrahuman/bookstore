@@ -7,7 +7,7 @@
 
 Demo view                                |  Static view
 :---------------------------------------:|:---------------------------------------:
-![](./public/Animation1.gif)             |  ![](./public/Capture.PNG)
+![](./public/Animation2.gif)             |  ![](./public/Capture.PNG)
 
 
 ## Built With
