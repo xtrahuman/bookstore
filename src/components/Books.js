@@ -21,9 +21,9 @@ const Books = (props) => {
           <p className="book-name">{name}</p>
         </div>
         <div className="interactive-btn">
-          <button type="button" className="int-button">comment</button>
-          <button type="button" className="int-button" onClick={() => removeBook(book)}>remove</button>
-          <button type="button" className="int-button">edit</button>
+          <button type="button" className="int-button">Comment</button>
+          <button type="button" className="int-button" onClick={() => removeBook(book)}>Remove</button>
+          <button type="button" className="int-button">Edit</button>
         </div>
       </div>
       <div className="chapter-completion">

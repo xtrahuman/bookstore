@@ -147,8 +147,9 @@ ul.book-list li {
 
 .int-button {
   height: 1.188rem;
-  margin: 0.188rem 0.938rem 0.125rem 0;
+  margin: 0.188rem 0.338rem 0.125rem 0;
   font-family: RobotoSlab, Arial, Helvetica, sans-serif;
+  padding-right: 0.6rem;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -159,6 +160,11 @@ ul.book-list li {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  border-right: 2px solid #707070;
+}
+
+.int-button:last-child {
+    border-right: none;
 }
 
 .chapter-completion {
