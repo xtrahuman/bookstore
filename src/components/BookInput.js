@@ -28,8 +28,6 @@ const BookInput = (props) => {
         title: '',
         bookType: bookText.bookType,
       });
-    } else {
-      alert('Please fill required details');
     }
   };
 

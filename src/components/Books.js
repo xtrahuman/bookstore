@@ -6,7 +6,6 @@ const Books = (props) => {
     name: PropTypes.string.isRequired,
     bookType: PropTypes.string.isRequired,
     removeBook: PropTypes.func.isRequired,
-    // id: PropTypes.string.isRequired,
     book: PropTypes.oneOfType([PropTypes.object]).isRequired,
   };
 
