@@ -8,7 +8,7 @@ const BookInput = (props) => {
 
   const [bookText, setBookText] = useState({
     title: '',
-    bookType: 'action',
+    bookType: 'select category',
   });
 
   const onChange = (e) => {
@@ -22,7 +22,7 @@ const BookInput = (props) => {
     const { moreBook } = props;
 
     e.preventDefault();
-    if (bookText.title.trim()) {
+    if (bookText.title.trim() && bookText.bookType !== 'select category') {
       moreBook(bookText.title, bookText.bookType);
       setBookText({
         title: '',
@@ -32,7 +32,7 @@ const BookInput = (props) => {
   };
 
   return (
-    <div>
+    <div className="book-input">
       <h2>Add new book</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -44,11 +44,12 @@ const BookInput = (props) => {
           onChange={onChange}
         />
         <select id="selectbooks" name="bookType" onChange={onChange} form="book-form">
+          <option value="select category">select category</option>
           <option value="action">action</option>
           <option value="economy">economy</option>
           <option value="science fiction">science fiction</option>
         </select>
-        <button type="submit" className="form-Button">submit book</button>
+        <button type="submit" className="form-button">SUBMIT BOOK</button>
       </form>
     </div>
   );

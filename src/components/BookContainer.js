@@ -29,10 +29,13 @@ const bookContainer = () => {
   };
 
   return (
-    <div>
+    <div className="book-container">
       <div className="header-nav">
         <h1>Bookstore cms</h1>
         <Navbar />
+        <div className="profile">
+          <div className="user-profile"><i className="fa fa-user" /></div>
+        </div>
       </div>
       <Routes>
         <Route
