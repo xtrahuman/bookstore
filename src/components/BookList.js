@@ -9,7 +9,7 @@ const BookList = (props) => {
   };
   const { allbooks, removeBook } = props;
   return (
-    <ul>
+    <ul className="book-list">
       {allbooks.map((book) => (
         <Books
           key={book.item_id}
