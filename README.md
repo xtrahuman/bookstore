@@ -34,7 +34,7 @@ kindly click the link below to view the website
 👤 **Okpara Tochukwu**
 
 - GitHub: [@xtrahuman](https://github.com/xtrahuman)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/tochukwu-okpara-449528197)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/tochukwuokpara)
 
 
 ## 🤝 Contributing
